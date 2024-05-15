@@ -1,9 +1,13 @@
 
 <view>
-  this is a blank page
   <view class="container">
-    <button onTap="navigateToScreen1">Go to Screen 1</button>
-    <button onTap="navigateToScreen2">Go to Screen 2</button>
-    <button onTap="navigateToScreen3">Go to Screen 3</button>
+    <text>This is a blank page</text>
+  </view>
+
+  <!-- Bottom navigation bar -->
+  <view class="navigation-bar">
+    <view class="button" onTap="navigateToScreen1">Screen 1</view>
+    <view class="button" onTap="navigateToScreen2">Screen 2</view>
+    <view class="button" onTap="navigateToScreen3">Screen 3</view>
   </view>
 </view>

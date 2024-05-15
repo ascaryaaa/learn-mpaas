@@ -1,0 +1,9 @@
+
+<view>
+  this is a blank page
+  <view class="container">
+    <button onTap="navigateToScreen1">Go to Screen 1</button>
+    <button onTap="navigateToScreen2">Go to Screen 2</button>
+    <button onTap="navigateToScreen3">Go to Screen 3</button>
+  </view>
+</view>

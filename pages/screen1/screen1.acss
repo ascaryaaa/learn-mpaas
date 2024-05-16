@@ -1,0 +1,37 @@
+/* index.acss */
+
+.article-list {
+  padding: 20rpx;
+}
+
+.article {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.article-image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.article-details {
+  flex: 1;
+}
+
+.article-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.article-description {
+  font-size: 24rpx;
+  color: #666666;
+  margin-bottom: 10rpx;
+}
+
+.article-source {
+  font-size: 24rpx;
+  color: #999999;
+}

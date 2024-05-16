@@ -1,4 +1,9 @@
-
-<view>
-  this is screen1
+<view class="container">
+  <block a:for="{{populationData}}" a:key="index">
+    <view class="item">
+      <text class="year">{{item.Year}}</text>
+      <text class="ID Year">{{item.Population}}</text>
+      <text class="Nation">{{item.Nation}}</text>
+    </view>
+  </block>
 </view>

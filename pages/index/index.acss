@@ -13,6 +13,7 @@
   background-color: #fff;
   box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
   height: 4em;
+  z-index: 1;
 }
 
 .navigation-bar .button {
@@ -22,10 +23,12 @@
   font-size: 16px;
   color: #666;
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .navigation-bar .button.active {
   color: #007bff; /* Change color for active button */
+  z-index: 1;
 }
 
 page {
@@ -36,29 +39,36 @@ page {
   height: 70px;
   display: flex;
   background-color: #2652ff;
+  z-index: 1;
 }
 
 .content .box {
   flex: 1;
-  border-radius: 4px;
+  border-radius: 10px;
+  z-index: 1;
 }
 
 .content .box:not(:first-of-type) {
   margin-left: 8px;
+  z-index: 1;
 }
 
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .card-content {
   display: flex;
   width: 330px;
   height: 165px;
-  background-color: #2652ff;
-  border-radius: 2%;
+  background-color: #1aae90;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  z-index: 1;
 }
 
 .card-content-left,
@@ -66,21 +76,32 @@ page {
   flex: 1;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .card-content-left {
-  background-color: red;
+  /* background-color: red; */
+  z-index: 1;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .card-content-right {
-  background-color: seagreen;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* background-color: seagreen; */
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .card-content-up {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: rgb(179, 2, 210);
+  /* background-color: rgb(179, 2, 210); */
+  z-index: 1;
 }
 
 .card-content-bottom{
@@ -88,5 +109,79 @@ page {
   display: flex;
   padding-bottom: 10px;
   flex-direction: column-reverse;
-  background-color: purple;
+  /* background-color: purple; */
+  z-index: 1;
+}
+
+.student-image {
+  width: 130px;
+  height: 130px;
+  z-index: 1;
+}
+
+.card-saldo{
+  display: flex;
+  width: 330px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.background-top{
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 170px;
+  background-color: #ffb339;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.saldo{
+  justify-content: center;
+  margin-right: 5px;
+  margin-left: 5px;
+  /* background-color: aqua; */
+  flex-direction: column;
+}
+
+.top-up-button{
+  flex: 1;
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 20px;
+  width: 70px;
+  background-color: #ffb339;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.virtual-card-button{
+  flex: 1;
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+  height: 20px;
+  width: 100px;
+  background-color: #ffb339;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-saldo{
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
 }

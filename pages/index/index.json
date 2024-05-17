@@ -1,1 +1,8 @@
-{}
+{
+  "defaultTitle": "Container",
+  "usingComponents": {
+    "ant-icon": "antd-mini/es/Icon/index",
+    "ant-container": "antd-mini/es/Container/index",
+    "ant-uploader": "antd-mini/es/ImageUpload/index"
+  }
+}

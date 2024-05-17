@@ -1,10 +1,5 @@
-
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* Add any necessary container styles here */
 }
 
 .navigation-bar {
@@ -31,4 +26,67 @@
 
 .navigation-bar .button.active {
   color: #007bff; /* Change color for active button */
+}
+
+page {
+  background-color: #fff;
+}
+
+.content {
+  height: 70px;
+  display: flex;
+  background-color: #2652ff;
+}
+
+.content .box {
+  flex: 1;
+  border-radius: 4px;
+}
+
+.content .box:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  width: 330px;
+  height: 165px;
+  background-color: #2652ff;
+  border-radius: 2%;
+}
+
+.card-content-left,
+.card-content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-left {
+  background-color: red;
+}
+
+.card-content-right {
+  background-color: seagreen;
+}
+
+.card-content-up {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(179, 2, 210);
+}
+
+.card-content-bottom{
+  flex: 1;
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: column-reverse;
+  background-color: purple;
 }

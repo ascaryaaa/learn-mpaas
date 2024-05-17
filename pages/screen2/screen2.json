@@ -1,1 +1,23 @@
-{}
+{
+  "defaultTitle": "Component",
+  "usingComponents": {
+    "ant-button": "antd-mini/es/Button/index",
+    "ant-container": "antd-mini/es/Container/index",
+    "form-input": "antd-mini/es/Form/FormInput/index",
+    "form-switch": "antd-mini/es/Form/FormSwitch/index",
+    "form-stepper": "antd-mini/es/Form/FormStepper/index",
+    "form-picker": "antd-mini/es/Form/FormPicker/index",
+    "form-date-picker": "antd-mini/es/Form/FormDatePicker/index",
+    "form-range-picker": "antd-mini/es/Form/FormRangePicker/index",
+    "form-cascader-picker": "antd-mini/es/Form/FormCascaderPicker/index",
+    "form-checkbox-group": "antd-mini/es/Form/FormCheckboxGroup/index",
+    "form-radio-group": "antd-mini/es/Form/FormRadioGroup/index",
+    "form-slider": "antd-mini/es/Form/FormSlider/index",
+    "form-selector": "antd-mini/es/Form/FormSelector/index",
+    "form-upload-image": "antd-mini/es/Form/FormImageUpload/index",
+    "form-rate": "antd-mini/es/Form/FormRate/index",
+    "form-textarea": "antd-mini/es/Form/FormTextarea/index",
+    "ant-icon": "antd-mini/es/Icon/index",
+    "ant-toast": "antd-mini/es/Toast/index"
+  }
+}

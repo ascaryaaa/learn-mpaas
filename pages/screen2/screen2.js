@@ -1,35 +1,63 @@
+import { Form } from 'antd-mini/es/Form/form';
+import cityList from './city';
 Page({
-  onLoad(query) {
-    // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
-  },
-  onReady() {
-    // 页面加载完成
-  },
-  onShow() {
-    // 页面显示
-  },
-  onHide() {
-    // 页面隐藏
-  },
-  onUnload() {
-    // 页面被关闭
-  },
-  onTitleClick() {
-    // 标题被点击
-  },
-  onPullDownRefresh() {
-    // 页面被下拉
-  },
-  onReachBottom() {
-    // 页面被拉到底部
-  },
-  onShareAppMessage() {
-    // 返回自定义分享信息
-    return {
-      title: 'My App',
-      desc: 'My App description',
-      path: 'pages/screen2/screen2',
-    };
-  },
+    handleTap(e) {
+      my.alert({
+          title: '点击按钮',
+      });
+    },
+    data: {
+        fruitList: ['苹果', '香蕉', '橘子', '西瓜'],
+        cityList,
+        radioGroupOptions: [
+            { value: 'cat', label: '🐱' },
+            { value: 'fox', label: '🦊' },
+        ],
+        checkboxGroupOptions: [
+            { value: 'tomato', label: '🍅' },
+            { value: 'potato', label: '🥔' },
+            { value: 'eggplant', label: '🍆' },
+        ],
+        selectorOptions: [
+            { value: 'basketball', text: '🏀' },
+            { value: 'football', text: '⚽️' },
+            { value: 'badminton', text: '🏸️' },
+        ],
+        toastShow: false,
+    },
+    onLoad() {
+        this.form = new Form();
+    },
+    handleRef(ref) {
+        this.form.addItem(ref);
+    },
+    reset() {
+        this.form.reset();
+    },
+    async submit() {
+        const values = await this.form.submit();
+        my.alert({
+            title: '提交',
+            content: JSON.stringify(values, null, 2),
+        });
+        console.log(values);
+    },
+    onUpload(localFile) {
+        return new Promise((resolve) => {
+            console.log('上传的图片为：', localFile);
+            setTimeout(() => {
+                resolve('https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*5m0ZQYhxhjEAAAAAAAAAAAAAARQnAQ');
+            }, 2000);
+        });
+    },
+    showToast() {
+        this.setData({
+            toastShow: true,
+        });
+    },
+    handleCloseToast() {
+        this.setData({
+            toastShow: false,
+        });
+    },
 });

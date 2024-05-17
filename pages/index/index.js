@@ -1,31 +1,45 @@
+function onRemove(file) {
+  return new Promise((resolve) => {
+      console.log('即将移除的图片为：', file);
+      my.confirm({
+          title: '是否确认移除图片',
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          success: (e) => {
+              resolve(e.confirm);
+          },
+      });
+  });
+}
+function onUpload(file) {
+  console.log('当前上传的图片为：', file);
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          resolve('https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*5m0ZQYhxhjEAAAAAAAAAAAAAARQnAQ');
+      }, 2000);
+  });
+}
 Page({
+  data: {
+    defaultFileList: [
+        {
+            url: 'https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*znK_ToIL8rQAAAAAAAAAAAAAARQnAQ',
+            status: 'done',
+        },
+        {
+            url: 'https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*kStORbDQxwMAAAAAAAAAAAAAARQnAQ',
+            status: 'done',
+        },
+        {
+            url: 'https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*K4Z-RLHuliYAAAAAAAAAAAAAARQnAQ',
+            status: 'done',
+        },
+    ],
+  },
   onLoad(query) {
-    // 页面加载
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
   },
-  onReady() {
-    // 页面加载完成
-  },
-  onShow() {
-    // 页面显示
-  },
-  onHide() {
-    // 页面隐藏
-  },
-  onUnload() {
-    // 页面被关闭
-  },
-  onTitleClick() {
-    // 标题被点击
-  },
-  onPullDownRefresh() {
-    // 页面被下拉
-  },
-  onReachBottom() {
-    // 页面被拉到底部
-  },
   onShareAppMessage() {
-    // 返回自定义分享信息
     return {
       title: 'My App',
       desc: 'My App description',
@@ -46,5 +60,16 @@ Page({
     my.navigateTo({
       url: '/pages/screen3/screen3'
     });
-  }
+  },
+  onChange(fileList) {
+    console.log('Picture list：', fileList);
+  },
+  handleUploaderRef(ref) {
+    console.log('handleUploaderRef', ref);
+    this.handleUploaderRef = ref;
+  },
+  upload() {
+      this.handleUploaderRef.chooseImage();
+  },
+  onUpload,
 });

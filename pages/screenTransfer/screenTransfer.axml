@@ -1,16 +1,31 @@
 <view class="container">
   <ant-form-input
-    label="Account Number"
-    name="account number"
+    label="From Card ID"
+    name="fromCardId"
+    type="number"
+    placeholder="Enter from card ID"
     required
     position="{{ position }}"
-    ref="handleRef" />
-
+    ref="handleRef" 
+  />
+  <ant-form-input
+    label="To Card ID"
+    name="toCardId"
+    type="number"
+    placeholder="Enter to card ID"
+    required
+    position="{{ position }}"
+    ref="handleRef" 
+  />
   <ant-form-input
     label="Amount"
     name="amount"
+    type="number"
+    placeholder="Enter amount"
+    required
     position="{{ position }}"
-    ref="handleRef" />
+    ref="handleRef" 
+  />
 
   <view class="buttons">
     <ant-button

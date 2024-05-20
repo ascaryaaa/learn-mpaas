@@ -2,8 +2,6 @@
   "defaultTitle": "Form",
   "usingComponents": {
     "ant-form-input": "antd-mini/es/Form/FormInput/index",
-    "ant-form-switch": "antd-mini/es/Form/FormSwitch/index",
-    "ant-form-stepper": "antd-mini/es/Form/FormStepper/index",
     "ant-button": "antd-mini/es/Button/index"
   }
 }

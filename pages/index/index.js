@@ -1,13 +1,20 @@
 Page({
-  onLoad(query) {
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+  data: {
+    studentName: '',
+    jurusan: '-',
+    studentID: '',
+    saldo: ''
+  },
+
+  onLoad() {
     this.fetchUsers(); // Fetch users when the page is loaded
   },
+
   onShareAppMessage() {
     return {
       title: 'My App',
       desc: 'My App description',
-      path: 'pages/index/index',
+      path: 'pages/index/index'
     };
   },
   navigateToScreen1() {
@@ -30,6 +37,7 @@ Page({
       url: '/pages/screenTransfer/screenTransfer'
     });
   },
+
   fetchUsers() {
     my.httpRequest({
       url: 'http://localhost:8083/users',
@@ -40,35 +48,41 @@ Page({
       },
       fail: (err) => {
         console.error('Error fetching users:', err);
+        my.alert({
+          title: 'Error',
+          content: 'Failed to fetch user data. Please try again.'
+        });
       },
       complete: () => {
         console.log('Fetch users request completed');
       }
-    }).then((res) => {
-      console.log('Promise resolved with response:', res);
-    }).catch((err) => {
-      console.error('Promise rejected with error:', err);
     });
   },
+
   updateUserContent(userData) {
-    // Assuming userData is an array containing user objects
-    if (userData && userData.length > 0) {
-      const user = userData[0]; // Assuming only one user for simplicity
-      const saldo = parseFloat(user.user_balance).toLocaleString('id-ID');
-      const studentName = user.user_name;
-      const jurusan = 'Your Jurusan Here'; // Replace with actual jurusan from user data
-      const studentID = '890 278 0092'; // Replace with actual student ID from user data
+    try {
+      if (Array.isArray(userData) && userData.length > 0) {
+        const user = userData[0];
+        const saldo = user.cards.length > 0 ? user.cards[0].cardBalance : 0;
+        const studentName = user.userName;
+        const studentID = user.cards[0].cardNumber.toString();
 
-      // Update saldo view
-      this.setData({
-        saldo: saldo
-      });
+        // Update saldo view
+        this.setData({
+          saldo: saldo
+        });
 
-      // Update student info view
-      this.setData({
-        studentName: studentName,
-        jurusan: jurusan,
-        studentID: studentID
+        // Update student info view
+        this.setData({
+          studentName: studentName,
+          studentID: studentID
+        });
+      }
+    } catch (error) {
+      console.error('Error parsing user data:', error);
+      my.alert({
+        title: 'Error',
+        content: 'Failed to parse user data. Please try again.'
       });
     }
   }

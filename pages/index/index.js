@@ -1,7 +1,7 @@
 Page({
   data: {
     studentName: '',
-    jurusan: '-',
+    jurusan: '',
     studentID: '',
     saldo: ''
   },
@@ -64,18 +64,20 @@ Page({
       if (Array.isArray(userData) && userData.length > 0) {
         const user = userData[0];
         const saldo = user.cards.length > 0 ? user.cards[0].cardBalance : 0;
+        const jurusan = user.userJurusan;
         const studentName = user.userName;
         const studentID = user.cards[0].cardNumber.toString();
 
         // Update saldo view
         this.setData({
-          saldo: saldo
+          saldo: saldo,
         });
 
         // Update student info view
         this.setData({
           studentName: studentName,
-          studentID: studentID
+          studentID: studentID,
+          jurusan: jurusan
         });
       }
     } catch (error) {

@@ -185,3 +185,49 @@ page {
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
 }
+
+.card-content-menu {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  width: 330px;
+  /* background-color: #1aae90; */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.feat {
+  flex: 1; /* Ensure equal width for all feature cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  /* background-color: aquamarine; */
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+.promo-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping to the next line */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+}
+
+.promo {
+  flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+  width: 160px;
+  height: 90px;
+  margin: 8px;
+  background-color: pink;
+}

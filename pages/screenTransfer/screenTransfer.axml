@@ -1,0 +1,23 @@
+<view class="container">
+  <ant-form-input
+    label="Account Number"
+    name="account number"
+    required
+    position="{{ position }}"
+    ref="handleRef" />
+
+  <ant-form-input
+    label="Amount"
+    name="amount"
+    position="{{ position }}"
+    ref="handleRef" />
+
+  <view class="buttons">
+    <ant-button
+      type="primary"
+      onTap="submit"
+      className="button">
+      Submit
+    </ant-button>
+  </view>
+</view>

@@ -1,6 +1,7 @@
 {
   "subPackageBuildType": "shared",
   "pages": [
+    "pages/screenLogin/screenLogin",
     "pages/index/index",
     "pages/screen1/screen1",
     "pages/screen2/screen2",

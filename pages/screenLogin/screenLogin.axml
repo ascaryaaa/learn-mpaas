@@ -1,0 +1,26 @@
+<view class="container">
+  <image class="logo" src="/images/logo.png" />
+  <text class="title">Login</text>
+
+  <view class="input-wrap">
+    <input
+      class="input"
+      type="text"
+      placeholder="Username"
+      value="{{ username }}"
+      onInput="handleInputUsername"
+    />
+  </view>
+
+  <view class="input-wrap">
+    <input
+      class="input"
+      type="password"
+      placeholder="Password"
+      value="{{ password }}"
+      onInput="handleInputPassword"
+    />
+  </view>
+
+  <button class="button" onTap="handleLogin">Login</button>
+</view>

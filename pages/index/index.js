@@ -17,6 +17,7 @@ Page({
       path: 'pages/index/index'
     };
   },
+
   navigateToScreen1() {
     my.navigateTo({
       url: '/pages/screen1/screen1'
@@ -44,53 +45,62 @@ Page({
   },
 
   fetchUsers() {
-    my.httpRequest({
-      url: 'http://localhost:8083/users',
-      method: 'GET',
+    my.getStorage({
+      key: 'userId',
       success: (res) => {
-        console.log('Users fetched successfully:', res.data);
-        this.updateUserContent(res.data); // Update user content
+        const userId = res.data;
+        this.fetchStudentData(userId);
       },
       fail: (err) => {
-        console.error('Error fetching users:', err);
+        console.error('Failed to fetch userId from storage:', err);
         my.alert({
           title: 'Error',
           content: 'Failed to fetch user data. Please try again.'
         });
-      },
-      complete: () => {
-        console.log('Fetch users request completed');
       }
     });
   },
 
-  updateUserContent(userData) {
-    try {
-      if (Array.isArray(userData) && userData.length > 0) {
-        const user = userData[0];
-        const saldo = user.cards.length > 0 ? user.cards[0].cardBalance : 0;
-        const jurusan = user.userJurusan;
-        const studentName = user.userName;
-        const studentID = user.cards[0].cardNumber.toString();
+  fetchStudentData(userId) {
+    my.httpRequest({
+      url: `http://localhost:8083/users/${userId}`, // Endpoint to fetch user data based on userId
+      method: 'GET',
+      success: (res) => {
+        console.log('User data fetched successfully:', res.data);
 
-        // Update saldo view
-        this.setData({
-          saldo: saldo,
-        });
+        try {
+          const user = res.data;
+          const saldo = user.cards.length > 0 ? user.cards[0].cardBalance : 0;
+          const jurusan = user.userJurusan;
+          const studentName = user.userName;
+          const studentID = user.cards[0].cardNumber.toString();
 
-        // Update student info view
-        this.setData({
-          studentName: studentName,
-          studentID: studentID,
-          jurusan: jurusan
+          // Update saldo view
+          this.setData({
+            saldo: saldo
+          });
+
+          // Update student info view
+          this.setData({
+            studentName: studentName,
+            studentID: studentID,
+            jurusan: jurusan
+          });
+        } catch (error) {
+          console.error('Error parsing user data:', error);
+          my.alert({
+            title: 'Error',
+            content: 'Failed to parse user data. Please try again.'
+          });
+        }
+      },
+      fail: (err) => {
+        console.error('Error fetching user data:', err);
+        my.alert({
+          title: 'Error',
+          content: 'Failed to fetch user data. Please try again.'
         });
       }
-    } catch (error) {
-      console.error('Error parsing user data:', error);
-      my.alert({
-        title: 'Error',
-        content: 'Failed to parse user data. Please try again.'
-      });
-    }
+    });
   }
 });

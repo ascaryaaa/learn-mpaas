@@ -7,7 +7,9 @@
     "pages/screen2/screen2",
     "pages/screen3/screen3",
     "pages/screenTransfer/screenTransfer",
-    "pages/screenMarket/screenMarket"
+    "pages/screenMarket/screenMarket",
+    "pages/screenTopUp/screenTopUp"
+    
   ],
   "window": {
     "defaultTitle": "My App"

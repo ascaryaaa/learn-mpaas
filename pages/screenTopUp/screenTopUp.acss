@@ -1,0 +1,18 @@
+.option {
+  background-color: aquamarine;
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  background-color: brown;
+  align-items:center;
+  justify-content: space-evenly;
+}

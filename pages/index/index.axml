@@ -15,7 +15,7 @@
       </view>
       <view>
         <view class="top-up-button">
-          <text class="font-saldo">Top Up</text>
+          <text class="font-saldo" onTap="navigateToScreenTopUp">Top Up</text>
         </view>
       </view>
       <view>
@@ -40,7 +40,7 @@
         </view>
       </view>
       <view class="card-content-right">
-        <image style="border-radius:100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfBrTzjblqtKxXgRcDV63uJjYq29SC9WvBg&s" alt="Student Image" class="student-image"/>
+        <image style="border-radius:100px" src="{{studentProfilePicture}}" alt="Student Image" class="student-image"/>
       </view>
     </view>
   </view>

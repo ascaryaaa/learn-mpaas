@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Form",
+  "defaultTitle": "Transfer",
   "usingComponents": {
     "ant-form-input": "antd-mini/es/Form/FormInput/index",
     "ant-button": "antd-mini/es/Button/index"

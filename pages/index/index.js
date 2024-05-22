@@ -74,6 +74,7 @@ Page({
           const jurusan = user.userJurusan;
           const studentName = user.userName;
           const studentID = user.cards[0].cardNumber.toString();
+          const studentProfilePicture = user.userProfilePicture;
 
           // Update saldo view
           this.setData({
@@ -84,7 +85,8 @@ Page({
           this.setData({
             studentName: studentName,
             studentID: studentID,
-            jurusan: jurusan
+            jurusan: jurusan,
+            studentProfilePicture: studentProfilePicture
           });
         } catch (error) {
           console.error('Error parsing user data:', error);

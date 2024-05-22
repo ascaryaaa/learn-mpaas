@@ -37,6 +37,11 @@ Page({
       url: '/pages/screenTransfer/screenTransfer'
     });
   },
+  navigateToScreenMarket() {
+    my.navigateTo({
+      url: '/pages/screenMarket/screenMarket'
+    });
+  },
 
   fetchUsers() {
     my.httpRequest({

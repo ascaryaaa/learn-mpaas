@@ -55,6 +55,28 @@ Page({
             // Successful login
             console.log('Login successful for:', foundUser);
 
+            // Store the user's ID in local storage
+            my.setStorage({
+              key: 'userId',
+              data: foundUser.userId,
+              success: () => {
+                console.log('User ID stored successfully.');
+                // Log the stored user ID to verify
+                my.getStorage({
+                  key: 'userId',
+                  success: (res) => {
+                    console.log('Stored user ID:', res.data);
+                  },
+                  fail: (err) => {
+                    console.error('Failed to retrieve user ID:', err);
+                  }
+                });
+              },
+              fail: (err) => {
+                console.error('Failed to store user ID:', err);
+              }
+            });
+
             // Navigate to home screen or perform any other action
             my.navigateTo({
               url: '/pages/index/index'

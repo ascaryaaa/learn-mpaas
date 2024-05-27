@@ -112,7 +112,6 @@
     </view>
   </view>
 
-
   <!-- Bottom navigation bar -->
   <view class="navigation-bar">
     <view class="button" onTap="navigateToScreen1">Screen 1</view>

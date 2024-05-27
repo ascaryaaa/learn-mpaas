@@ -1,4 +1,18 @@
 
 <view>
   this is screen Kampusku
+  <view class="container">
+    <view class="feature">
+      1
+    </view>
+    <view class="feature">
+      2
+    </view>
+    <view class="feature">
+      3
+    </view>
+    <view class="feature">
+      4
+    </view>
+  </view>
 </view>

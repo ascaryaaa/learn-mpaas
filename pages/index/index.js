@@ -43,7 +43,11 @@ Page({
       url: '/pages/screenMarket/screenMarket'
     });
   },
-
+  navigateToScreenKampusKu() {
+    my.navigateTo({
+      url: '/pages/screenKampusKu/screenKampusKu'
+    });
+  },
   fetchUsers() {
     my.getStorage({
       key: 'userId',

@@ -29,9 +29,10 @@ Page({
       }
     });
   },
-  navigateToScreenMarketDetail() {
+  navigateToScreenMarketDetail(event) {
+    const productId = event.currentTarget.dataset.id;
     my.navigateTo({
-      url: '/pages/screenMarket/screenMarketDetail/screenMarketDetail'
+      url: `/pages/screenMarket/screenMarketDetail/screenMarketDetail?productId=${productId}`
     });
   }
 });

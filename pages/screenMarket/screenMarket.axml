@@ -2,7 +2,7 @@
   <view class="header">Market</view>
   <view class="product-list">
     <view a:for="{{ products }}" a:for-item="product" a:for-index="index">
-      <view class="product-item" onTap="navigateToScreenMarketDetail">
+      <view class="product-item" onTap="navigateToScreenMarketDetail" data-id="{{ product.productId }}">
         <image class="product-image" src="{{ product.productImage }}"></image>
         <view class="product-details">
           <view class="product-name">{{ product.productName }}</view>

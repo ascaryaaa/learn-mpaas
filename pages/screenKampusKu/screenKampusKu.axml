@@ -1,18 +1,12 @@
-
-<view>
-  this is screen Kampusku
+<view class="screen">
+  <view class="header">
+    this is screen Kampusku
+  </view>
+  <image class="background" src="../../assets/background-study.jpg"></image>
   <view class="container">
-    <view class="feature">
-      1
-    </view>
-    <view class="feature">
-      2
-    </view>
-    <view class="feature">
-      3
-    </view>
-    <view class="feature">
-      4
-    </view>
+    <view class="feature">1</view>
+    <view class="feature">2</view>
+    <view class="feature">3</view>
+    <view class="feature">4</view>
   </view>
 </view>

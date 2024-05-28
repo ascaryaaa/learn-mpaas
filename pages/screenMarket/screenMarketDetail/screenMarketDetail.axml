@@ -1,3 +1,13 @@
-<view>
-  detail
+<view class="container">
+  <view class="header">
+    <text>Product Detail</text>
+  </view>
+  <view class="product-detail">
+    <image class="product-image" src="{{product.productImage}}" mode="aspectFit"></image>
+    <view class="product-info">
+      <view class="product-name">{{product.productName}}</view>
+      <view class="product-description">{{product.productDescription}}</view>
+      <view class="product-price">Price: Rp {{product.productPrice}}</view>
+    </view>
+  </view>
 </view>

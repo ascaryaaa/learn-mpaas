@@ -1,24 +1,15 @@
 <view class="container">
   <ant-form-input
-    label="From Card ID"
-    name="fromCardId"
+    label="Rekening Tujuan"
+    name="toCardNumber"
     type="number"
-    placeholder="Enter from card ID"
+    placeholder="Enter to card number"
     required
     position="{{ position }}"
     ref="handleRef" 
   />
   <ant-form-input
-    label="To Card ID"
-    name="toCardId"
-    type="number"
-    placeholder="Enter to card ID"
-    required
-    position="{{ position }}"
-    ref="handleRef" 
-  />
-  <ant-form-input
-    label="Amount"
+    label="Nominal"
     name="amount"
     type="number"
     placeholder="Enter amount"
@@ -32,7 +23,7 @@
       type="primary"
       onTap="submit"
       className="button">
-      Submit
+      Lanjutkan
     </ant-button>
   </view>
 </view>

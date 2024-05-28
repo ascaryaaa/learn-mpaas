@@ -2,7 +2,6 @@
   "subPackageBuildType": "shared",
   "pages": [
     
-    "pages/screenKampusKu/screenKampusKu",
     "pages/screenLogin/screenLogin",
     "pages/index/index",
     "pages/screen1/screen1",
@@ -11,9 +10,9 @@
     "pages/screenTransfer/screenTransfer",
     "pages/screenMarket/screenMarket",
     "pages/screenTopUp/screenTopUp",
-    "pages/screenMarket/screenMarketDetail/screenMarketDetail"
-    
-    
+    "pages/screenKampusKu/screenKampusKu",
+    "pages/screenMarket/screenMarketDetail/screenMarketDetail",
+    "pages/screenTransfer/screenTransferKonfirmasi/screenTransferKonfirmasi"
   ],
   "window": {
     "defaultTitle": "My App"

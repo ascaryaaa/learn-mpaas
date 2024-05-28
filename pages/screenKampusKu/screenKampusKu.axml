@@ -4,9 +4,9 @@
   </view>
   <image class="background" src="../../assets/background-study.jpg"></image>
   <view class="container">
-    <view class="feature">1</view>
-    <view class="feature">2</view>
-    <view class="feature">3</view>
-    <view class="feature">4</view>
+    <view class="feature">Kalender Akademik</view>
+    <view class="feature">Beasiswa</view>
+    <view class="feature">Kelas</view>
+    <view class="feature">Akademik</view>
   </view>
 </view>

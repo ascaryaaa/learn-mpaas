@@ -28,5 +28,10 @@ Page({
         });
       }
     });
+  },
+  navigateToScreenMarketDetail() {
+    my.navigateTo({
+      url: '/pages/screenMarket/screenMarketDetail/screenMarketDetail'
+    });
   }
 });

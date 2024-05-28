@@ -1,3 +1,20 @@
-<view>
-konfirmasi  
+<view class="container">
+  <view>
+    <text>From Card Number: {{transactionDetails.fromCardNumber}}</text>
+  </view>
+  <view>
+    <text>To Card Number: {{transactionDetails.toCardNumber}}</text>
+  </view>
+  <view>
+    <text>Amount: {{transactionDetails.amount}}</text>
+  </view>
+
+  <view class="buttons">
+    <ant-button
+      type="primary"
+      onTap="confirmTransaction"
+      className="button">
+      Lanjutkann
+    </ant-button>
+  </view>
 </view>

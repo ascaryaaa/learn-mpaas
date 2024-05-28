@@ -31,6 +31,7 @@ Page({
                 key: 'userId',
                 success: (res) => {
                     const userId = res.data;
+                    console.log('User ID:', userId);
 
                     // Make sure the userId is available
                     if (!userId) {
@@ -48,31 +49,33 @@ Page({
                         success: (res) => {
                             console.log('Fetch fromCardNumber successful:', res);
                             const fromCardNumber = res.data.cardNumber;
+                            console.log('From Card Number:', fromCardNumber);
 
-                            // Make an HTTP request to the transferCardNumber endpoint
-                            my.httpRequest({
-                                url: 'http://localhost:8083/cards/transferCardNumber',
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                data: {
-                                    fromCardNumber,
-                                    toCardNumber: parseFloat(values.toCardNumber),
-                                    amount: parseFloat(values.amount),
-                                },
-                                success: (res) => {
-                                    console.log('Transfer successful:', res);
-                                    my.alert({
-                                        title: 'Transfer Successful',
-                                        content: JSON.stringify(res),
+                            // Log raw data before storing
+                            const transactionDetails = {
+                                fromCardNumber: fromCardNumber,
+                                toCardNumber: values.toCardNumber,
+                                amount: values.amount,
+                            };
+                            console.log('Raw Data to be stored:', transactionDetails);
+
+                            // Store transaction details in local storage
+                            my.setStorage({
+                                key: 'transactionDetails',
+                                data: transactionDetails,
+                                success: () => {
+                                    console.log('Transaction details stored successfully.');
+
+                                    // Navigate to confirmation screen
+                                    my.navigateTo({
+                                        url: '/pages/screenTransfer/screenTransferKonfirmasi/screenTransferKonfirmasi'
                                     });
                                 },
                                 fail: (err) => {
-                                    console.error('Transfer failed:', err);
+                                    console.error('Failed to store transaction details:', err);
                                     my.alert({
-                                        title: 'Transfer Failed',
-                                        content: JSON.stringify(err),
+                                        title: 'Error',
+                                        content: 'Failed to store transaction details. Please try again.',
                                     });
                                 }
                             });

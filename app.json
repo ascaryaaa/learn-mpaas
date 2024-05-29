@@ -12,7 +12,8 @@
     "pages/screenTopUp/screenTopUp",
     "pages/screenKampusKu/screenKampusKu",
     "pages/screenMarket/screenMarketDetail/screenMarketDetail",
-    "pages/screenTransfer/screenTransferKonfirmasi/screenTransferKonfirmasi"
+    "pages/screenTransfer/screenTransferKonfirmasi/screenTransferKonfirmasi",
+    "pages/screenTransfer/screenSuccessTransfer/screenSuccessTransfer"
   ],
   "window": {
     "defaultTitle": "My App"

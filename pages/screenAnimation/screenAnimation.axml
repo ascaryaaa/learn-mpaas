@@ -8,4 +8,14 @@
     </view>
     <button onTap="moveDown">Down</button>  
   </view>
+
+
+
+
+<!-- running text -->
+  <view class="running-text-container">
+    <text class="running-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </text>
+  </view>
 </view>

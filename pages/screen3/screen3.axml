@@ -1,4 +1,11 @@
-
 <view>
-  this is screen3
+  <ant-container title="Local Storage Upload Example">
+    <button onTap="chooseAndUploadImage">Choose and Upload Image</button>
+    <view>
+      <block a:for="{{uploadedFiles}}" a:key="url">
+        <image src="{{item.url}}" style="width: 100px; height: 100px;" />
+        <button data-file="{{item}}" onTap="onRemove">Remove</button>
+      </block>
+    </view>
+  </ant-container>
 </view>

@@ -1,1 +1,7 @@
-{}
+{
+  "defaultTitle": "ImageUpload",
+  "usingComponents": {
+    "ant-uploader": "antd-mini/es/ImageUpload/index",
+    "ant-container": "antd-mini/es/Container/index"
+  }
+}

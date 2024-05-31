@@ -27,11 +27,6 @@ Page({
       this.transfer();
   },
   transfer() {
-      // Reference code for transferring
-      // You can directly include the transfer logic here or call a separate function
-      // For simplicity, I'm including the transfer logic from your reference code
-      // Make sure to adjust the URLs and data as needed for your actual application
-
       // Retrieve transaction details from local storage
       const transactionDetails = this.data.transactionDetails;
       const fromCardNumber = transactionDetails.fromCardNumber;
@@ -55,6 +50,12 @@ Page({
               my.alert({
                   title: 'Transfer Successful',
                   content: JSON.stringify(res),
+                  success: () => {
+                      // Redirect to success payment screen
+                      my.redirectTo({
+                          url: '/pages/screenTransfer/screenSuccessTransfer/screenSuccessTransfer'
+                      });
+                  }
               });
           },
           fail: (err) => {

@@ -33,6 +33,11 @@ Page({
       url: '/pages/screen3/screen3'
     });
   },
+  navigateToCamera() {
+    my.navigateTo({
+      url: '/pages/camera/camera'
+    });
+  },
   navigateToScreenTransfer() {
     my.navigateTo({
       url: '/pages/screenTransfer/screenTransfer'

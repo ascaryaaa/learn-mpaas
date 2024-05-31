@@ -117,4 +117,5 @@
     <view class="button" onTap="navigateToScreen1">Screen 1</view>
     <view class="button" onTap="navigateToScreen2">Screen 2</view>
     <view class="button" onTap="navigateToScreen3">Screen 3</view>
+    <view class="button" onTap="navigateToCamera">Camera</view>
   </view>

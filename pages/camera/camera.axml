@@ -1,0 +1,10 @@
+<view>
+  <camera
+  id="camera"
+  flash="off"
+  frame-size="medium"
+  device-position="back"
+  onReady="onCameraReady"
+  style="width: 100%; height: 300px"
+/>;
+</view>

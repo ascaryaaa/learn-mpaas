@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="box" animation="{{animation}}"></view>
+  <view class="button-container">
+    <button onTap="moveUp">Up</button>
+    <view class="button-horizontal-container">
+      <button onTap="moveLeft">Left</button>
+      <button onTap="moveRight">Right</button>
+    </view>
+    <button onTap="moveDown">Down</button>  
+  </view>
+</view>

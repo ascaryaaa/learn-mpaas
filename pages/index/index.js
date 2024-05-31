@@ -33,6 +33,16 @@ Page({
       url: '/pages/screen3/screen3'
     });
   },
+  navigateToVideo() {
+    my.navigateTo({
+      url: '/pages/screenVideo/screenVideo'
+    });
+  },
+  navigateToAnimation() {
+    my.navigateTo({
+      url: '/pages/screenAnimation/screenAnimation'
+    });
+  },
   navigateToCamera() {
     my.navigateTo({
       url: '/pages/camera/camera'

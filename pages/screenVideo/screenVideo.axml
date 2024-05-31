@@ -1,0 +1,38 @@
+<view style="width:100%">
+  <video
+    style="width:100%"
+    id="myVideo"
+    src="{{video.src}}"
+    poster-size="{{video.posterSize}}"
+    poster="{{video.poster}}"
+    controls="{{video.showAllControls}}"
+    loop="{{video.isLooping}}"
+    muted="{{video.muteWhenPlaying}}"
+    autoplay="{{video.autoPlay}}"
+    direction="{{video.directionWhenFullScreen}}"
+    initial-time="{{video.initTime}}"
+    onPlay="onPlay"
+    onPause="onPause"
+    onTap="onTap"
+    onEnded="onEnded"
+    onError="onError"
+    onRenderStart="onRenderStart"
+    onTimeUpdate="onTimeUpdate"
+    onUserAction="onUserAction"
+    onFullScreenChange="onFullScreenChange"
+    onLoading="onLoading"
+  ></video>
+  <button type="default" size="defaultSize" onTap="play">Play</button>
+  <button type="default" size="defaultSize" onTap="pause">Pause</button>
+  <button type="default" size="defaultSize" onTap="stop">stop</button>
+  <button type="default" size="defaultSize" onTap="seek">seek</button>
+  <button type="default" size="defaultSize" onTap="requestFullScreen">
+    requestFullScreen
+  </button>
+  <button type="default" size="defaultSize" onTap="exitFullScreen">
+    exitFullScreen
+  </button>
+  <button type="default" size="defaultSize" onTap="mute">mute</button>
+  <view style="height:1000">
+  </view>
+</view>

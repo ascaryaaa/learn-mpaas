@@ -94,6 +94,24 @@
         </view>
         <text class="text-feat">Other</text>
       </view>
+      <view class="feat">
+        <view class="icon">
+          <image style="width: 95%; height: 95%" onTap="navigateToVideo" src="../../assets/telegram.png" />
+        </view>
+        <text class="text-feat">Other</text>
+      </view>
+      <view class="feat">
+        <view class="icon">
+          <image style="width: 95%; height: 95%" onTap="navigateToVideo" src="../../assets/video.png" />
+        </view>
+        <text class="text-feat">Video</text>
+      </view>
+      <view class="feat">
+        <view class="icon">
+          <image style="width: 95%; height: 95%" onTap="navigateToAnimation" src="../../assets/movies-app.png" />
+        </view>
+        <text class="text-feat">Animation</text>
+      </view>
     </view>
   </view>
 

@@ -1,32 +1,30 @@
-<view class="container">
-  <view class="box" animation="{{animation}}"></view>
+<view class="container" catchMove="onCatchMove">
+  <view class="box" animation="{{animation}}" style="left: {{x}}rpx; top: {{y}}rpx;"></view>
   <view class="button-container">
     <button onTap="moveUp">Up</button>
     <view class="button-horizontal-container">
       <button onTap="moveLeft">Left</button>
+      <button onTap="rotate">Rotate</button>
       <button onTap="moveRight">Right</button>
     </view>
     <button onTap="moveDown">Down</button>  
   </view>
 
-<!-- running text -->
+  <!-- running text -->
   <view class="running-text-container">
     <text class="running-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
     </text>
   </view>
 
-<!-- Gif -->
+  <!-- Gif -->
   <!-- using link -->
-  <view>
+  <view class="gif-container" style="left: {{gif1X}}rpx; top: {{gif1Y}}rpx;">
     <image mode="scaleToFill" src="https://i.ibb.co.com/RNGvMGW/download.gif"/>
   </view>
   <!-- using local -->
-  <view>
+  <view class="gif-container" style="left: {{gif2X}}rpx; top: {{gif2Y}}rpx;">
     <image mode="scaleToFill" src="../../assets/cat.gif" />
   </view>
-<!-- end gif -->
-
-
-
+  <!-- end gif -->
 </view>

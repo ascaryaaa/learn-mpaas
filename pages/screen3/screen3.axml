@@ -2,10 +2,16 @@
   <ant-container title="Local Storage Upload Example">
     <button onTap="chooseAndUploadImage">Choose and Upload Image</button>
     <view>
-      <block a:for="{{uploadedFiles}}" a:key="url">
-        <image src="{{item.url}}" style="width: 100px; height: 100px;" />
-        <button data-file="{{item}}" onTap="onRemove">Remove</button>
+      <text>Images in Local Storage:</text>
+      <block a:for="{{localStorageImages}}" a:key="url">
+        <view style="display: flex; align-items: center;">
+          <image src="{{item}}" style="width: 100px; height: 100px;" />
+          <button data-file="{{item}}" onTap="onRemoveLocalStorageImage" style="margin-left: 10px;">Remove</button>
+        </view>
       </block>
     </view>
   </ant-container>
+
+  <!-- Button to log files in local storage -->
+  <button onTap="logLocalStorageFiles">Refresh</button>
 </view>

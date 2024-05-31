@@ -9,13 +9,24 @@
     <button onTap="moveDown">Down</button>  
   </view>
 
-
-
-
 <!-- running text -->
   <view class="running-text-container">
     <text class="running-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
     </text>
   </view>
+
+<!-- Gif -->
+  <!-- using link -->
+  <view>
+    <image mode="scaleToFill" src="https://i.ibb.co.com/RNGvMGW/download.gif"/>
+  </view>
+  <!-- using local -->
+  <view>
+    <image mode="scaleToFill" src="../../assets/cat.gif" />
+  </view>
+<!-- end gif -->
+
+
+
 </view>

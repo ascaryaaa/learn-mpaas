@@ -17,7 +17,8 @@
     "pages/screenTransfer/screenTransferKonfirmasi/screenTransferKonfirmasi",
     "pages/screenVideo/screenVideo",
     "pages/screenAnimation/screenAnimation",
-    "pages/screenTransfer/screenSuccessTransfer/screenSuccessTransfer"
+    "pages/screenTransfer/screenSuccessTransfer/screenSuccessTransfer",
+    "pages/screenYoutube/screenYoutube"
   ],
   "window": {
     "defaultTitle": "My App"

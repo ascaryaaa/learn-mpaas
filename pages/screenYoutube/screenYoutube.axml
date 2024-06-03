@@ -1,0 +1,9 @@
+<view>
+  <canvas
+  id="canvas"
+  class="canvas"
+  onTouchStart="log"
+  onTouchMove="log"
+  onTouchEnd="log"
+  />
+</view>

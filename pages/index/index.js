@@ -63,6 +63,11 @@ Page({
       url: '/pages/screenKampusKu/screenKampusKu'
     });
   },
+  navigateToYoutube() {
+    my.navigateTo({
+      url: '/pages/screenYoutube/screenYoutube'
+    });
+  },
   fetchUsers() {
     my.getStorage({
       key: 'userId',

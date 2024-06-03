@@ -44,7 +44,7 @@ Page({
     });
   },
   rotate() {
-    // Rotate the card by 90 degrees clockwise
+    // Rotate the box by 90 degrees clockwise
     const newAngle = this.data.angle + 90;
     this.setData({
       angle: newAngle

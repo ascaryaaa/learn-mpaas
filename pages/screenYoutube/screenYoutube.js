@@ -1,6 +1,7 @@
 Page({
   data: {
     modalOpened: false,
+    showTop: false,
   },
   openModal() {
     this.setData({
@@ -15,6 +16,16 @@ Page({
   onModalClose() {
     this.setData({
       modalOpened: false,
+    });
+  },
+  onTopBtnTap() {
+    this.setData({
+      showTop: true,
+    });
+  },
+  onPopupClose() {
+    this.setData({
+      showTop: false,
     });
   },
   onReady() {

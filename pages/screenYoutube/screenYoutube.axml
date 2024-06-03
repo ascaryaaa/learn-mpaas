@@ -20,4 +20,13 @@
       <view slot="footer">Confirm</view>
     </modal>
   </view>
+
+  <view>
+    <view class="btn-container">
+      <button onTap="onTopBtnTap">Popup</button>
+    </view>
+    <popup show="{{showTop}}" position="top" onClose="onPopupClose">
+      <view style="height: 200px; background: #fff; display: flex; justify-content: center; align-items: center;">This is popup</view>
+    </popup>
+  </view>
 </view>

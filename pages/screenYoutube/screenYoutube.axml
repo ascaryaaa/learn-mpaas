@@ -6,4 +6,18 @@
   onTouchMove="log"
   onTouchEnd="log"
   />
+
+  <view>
+    <button onTap="openModal">Show Modal</button>
+    <modal
+      show="{{modalOpened}}"
+      onModalClick="onModalClick"
+      onModalClose="onModalClose"
+      topImage="https://img.example.com/example.png"
+    >
+      <view slot="header">Title</view>
+      Explain the current status, prompt the user solution, preferably no more than two lines
+      <view slot="footer">Confirm</view>
+    </modal>
+  </view>
 </view>

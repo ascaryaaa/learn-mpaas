@@ -1,0 +1,8 @@
+progress{
+  margin-bottom: 60rpx;
+}
+
+.page {
+  width: 100%;
+  background-color: beige;
+}

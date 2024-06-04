@@ -2,6 +2,12 @@ Page({
   data: {
     modalOpened: false,
     showTop: false,
+    videoId: 'Txlk7PiHaGk&list=RDTxlk7PiHaGk&start_radio=1',
+    style: "height:300;width:100%;left:10",
+    playerVars: {
+      'autoplay': 1, 
+      'modestbranding': 1
+    }
   },
   openModal() {
     this.setData({
@@ -75,5 +81,19 @@ Page({
   },
   onUnload() {
     clearInterval(this.interval)
+  },
+  onLoad() {
+  },
+  resetSrc1() {
+    this.setData({
+      videoId: "Txlk7PiHaGk&list=RDTxlk7PiHaGk&start_radio=1",
+      style: "background-color:white;height:400;width:100%;margin-top:200",
+    })
+  },
+  resetSrc2() {
+    this.setData({
+      videoId: "Txlk7PiHaGk&list=RDTxlk7PiHaGk&start_radio=1",
+      style: "background-color:white;height:300;width:100%;margin-top:100",
+    })
   }
 })

@@ -68,6 +68,11 @@ Page({
       url: '/pages/screenYoutube/screenYoutube'
     });
   },
+  navigateToChart() {
+    my.navigateTo({
+      url: '/pages/chart/chart'
+    });
+  },
   fetchUsers() {
     my.getStorage({
       key: 'userId',

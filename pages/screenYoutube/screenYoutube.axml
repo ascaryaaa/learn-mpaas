@@ -29,4 +29,16 @@
       <view style="height: 200px; background: #fff; display: flex; justify-content: center; align-items: center;">This is popup</view>
     </popup>
   </view>
+
+
+  <view style="width:100%">
+    <youtube-player 
+      id="myVideo"
+      style="{{style}}"
+      videoId={{videoId}}
+      playerVars={{playerVars}}
+    ></youtube-player>
+    <button type="default" size="defaultSize" onTap="resetSrc1">resetSrc1</button>
+    <button type="default" size="defaultSize" onTap="resetSrc2">resetSrc2</button>
+  </view>
 </view>

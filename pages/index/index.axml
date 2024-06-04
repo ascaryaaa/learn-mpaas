@@ -96,9 +96,9 @@
       </view>
       <view class="feat">
         <view class="icon">
-          <image style="width: 95%; height: 95%" onTap="navigateToVideo" src="../../assets/telegram.png" />
+          <image style="width: 95%; height: 95%" onTap="navigateToChart" src="../../assets/telegram.png" />
         </view>
-        <text class="text-feat">Other</text>
+        <text class="text-feat">Chart</text>
       </view>
       <view class="feat">
         <view class="icon">

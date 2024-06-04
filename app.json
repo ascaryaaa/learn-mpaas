@@ -18,7 +18,8 @@
     "pages/screenVideo/screenVideo",
     "pages/screenAnimation/screenAnimation",
     "pages/screenTransfer/screenSuccessTransfer/screenSuccessTransfer",
-    "pages/screenYoutube/screenYoutube"
+    "pages/screenYoutube/screenYoutube",
+    "pages/chart/chart"
   ],
   "window": {
     "defaultTitle": "My App"
